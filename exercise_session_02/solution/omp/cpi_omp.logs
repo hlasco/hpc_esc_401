@@ -1,0 +1,55 @@
+Thread rank: 0
+Thread rank: 34
+Thread rank: 13
+Thread rank: 9
+Thread rank: 6
+Thread rank: 27
+Thread rank: 8
+Thread rank: 11
+Thread rank: 22
+Thread rank: 24
+Thread rank: 30
+Thread rank: 26
+Thread rank: 35
+Thread rank: 14
+Thread rank: 16
+Thread rank: 25
+Thread rank: 21
+Thread rank: 29
+Thread rank: 3
+Thread rank: 19
+Thread rank: 23
+Thread rank: 18
+Thread rank: 20
+Thread rank: 15
+Thread rank: 10
+Thread rank: 31
+Thread rank: 28
+Thread rank: 17
+Thread rank: 32
+Thread rank: 1
+Thread rank: 33
+Thread rank: 5
+Thread rank: 7
+Thread rank: 4
+Thread rank: 12
+Thread rank: 2
+pi is approximately 3.1415926555898221, Error is 0.0000000020000290
+Computed in 0.1112 seconds
+
+
+Batch Job Summary Report (version 21.01) for Job "cpi_mpi" (29886742) on daint
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2021-03-11T17:49:54 2021-03-11T17:49:54 2021-03-11T17:49:55 2021-03-11T17:50:00   00:00:05   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    hlascomb         uzh8        debug        1      0.204 kJ
+

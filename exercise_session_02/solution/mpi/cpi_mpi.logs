@@ -1,0 +1,55 @@
+Process rank: 9
+Process rank: 11
+Process rank: 19
+Process rank: 33
+Process rank: 1
+Process rank: 2
+Process rank: 3
+Process rank: 4
+Process rank: 5
+Process rank: 6
+Process rank: 7
+Process rank: 8
+Process rank: 10
+Process rank: 12
+Process rank: 13
+Process rank: 14
+Process rank: 15
+Process rank: 16
+Process rank: 17
+Process rank: 18
+Process rank: 20
+Process rank: 21
+Process rank: 22
+Process rank: 23
+Process rank: 24
+Process rank: 25
+Process rank: 26
+Process rank: 27
+Process rank: 28
+Process rank: 29
+Process rank: 30
+Process rank: 31
+Process rank: 32
+Process rank: 34
+Process rank: 35
+Process rank: 0
+pi is approximately 3.1415926555898399, Error is 0.0000000020000468
+Computed in 0.04891 seconds
+
+
+Batch Job Summary Report (version 21.01) for Job "cpi_mpi" (29886697) on daint
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2021-03-11T17:47:30 2021-03-11T17:47:30 2021-03-11T17:47:33 2021-03-11T17:47:44   00:00:11   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    hlascomb         uzh8        debug        1      0.919 kJ
+

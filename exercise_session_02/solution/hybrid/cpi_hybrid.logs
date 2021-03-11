@@ -1,0 +1,55 @@
+Process rank: 5 Thread rank: 3
+Process rank: 5 Thread rank: 1
+Process rank: 5 Thread rank: 5
+Process rank: 5 Thread rank: 4
+Process rank: 5 Thread rank: 2
+Process rank: 5 Thread rank: 0
+Process rank: 1 Thread rank: 5
+Process rank: 1 Thread rank: 3
+Process rank: 1 Thread rank: 4
+Process rank: 1 Thread rank: 2
+Process rank: 1 Thread rank: 1
+Process rank: 1 Thread rank: 0
+Process rank: 2 Thread rank: 5
+Process rank: 2 Thread rank: 0
+Process rank: 2 Thread rank: 1
+Process rank: 2 Thread rank: 2
+Process rank: 2 Thread rank: 4
+Process rank: 2 Thread rank: 3
+Process rank: 3 Thread rank: 5
+Process rank: 3 Thread rank: 1
+Process rank: 3 Thread rank: 2
+Process rank: 3 Thread rank: 4
+Process rank: 3 Thread rank: 3
+Process rank: 3 Thread rank: 0
+Process rank: 4 Thread rank: 5
+Process rank: 4 Thread rank: 2
+Process rank: 4 Thread rank: 4
+Process rank: 4 Thread rank: 3
+Process rank: 4 Thread rank: 0
+Process rank: 4 Thread rank: 1
+Process rank: 0 Thread rank: 0
+Process rank: 0 Thread rank: 1
+Process rank: 0 Thread rank: 2
+Process rank: 0 Thread rank: 3
+Process rank: 0 Thread rank: 5
+Process rank: 0 Thread rank: 4
+pi is approximately 3.1415926555898599, Error is 0.0000000020000668
+Computed in 0.1165 seconds
+
+
+Batch Job Summary Report (version 21.01) for Job "cpi_hybrid" (29887005) on daint
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2021-03-11T18:12:38 2021-03-11T18:12:38 2021-03-11T18:12:39 2021-03-11T18:12:43   00:00:04   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    hlascomb         uzh8        debug        1      0.233 kJ
+

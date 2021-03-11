@@ -10,7 +10,7 @@
 #SBATCH --constraint=mc 
 #SBATCH --hint=nomultithread
 #SBATCH --output=cpi_omp.logs 
-#SBATC$ --output=cpi_omp_errors.logs 
+#SBATCH --error=cpi_omp_errors.logs 
 
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK 

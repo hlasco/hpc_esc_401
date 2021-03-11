@@ -10,7 +10,7 @@
 #SBATCH --constraint=mc 
 #SBATCH --hint=nomultithread
 #SBATCH --output=hostname.logs 
-#SBATC$ --output=hostname_errors.logs 
+#SBATCH --error=hostname_errors.logs 
 
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK 

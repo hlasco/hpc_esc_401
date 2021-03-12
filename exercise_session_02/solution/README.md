@@ -4,10 +4,15 @@
 The simplest way to setup your git repository is to first create it on bitbucket/github/gitlab. You can then clone this new empty repository on your machine with:
  `git clone https://github.com/<username>/<new_repo>.git`
  You can then add some files/directories locally, which will not modify the remote version of the repository. Some modifications of the repository (for example a new folder named `solution_exercise_02`) can be pushed to the remote version with the following commands: 
+ 
  `mkdir solution_exercise_02`
+ 
  `git add solution_exercise_02`
+ 
  `git commit -m "added solution directory for exercise 02"`
+ 
  `git push`
+ 
 ## Exercise 02
 
 **What is cc?**

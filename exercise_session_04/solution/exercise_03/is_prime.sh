@@ -13,9 +13,6 @@ fi
 
 UPPER_LIMIT=$(echo "scale=0; sqrt($NUMBER+1)" | bc -l)
 for ((i = 2 ; i <= $UPPER_LIMIT ; i++)); do
-  if [[ $i == 10000 ]]; then
-      break
-  fi
   if [ $(expr $NUMBER % $i) -eq 0 ]; then
     echo "FALSE, $NUMBER is divisable by $i"
     exit 0

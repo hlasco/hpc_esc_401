@@ -1,0 +1,43 @@
+Process rank: 2
+total ellapsed time using getTime: 0.4744 seconds
+Process rank: 3
+total ellapsed time using getTime: 0.4744 seconds
+Process rank: 4
+total ellapsed time using getTime: 0.4743 seconds
+Process rank: 5
+total ellapsed time using getTime: 0.4743 seconds
+Process rank: 6
+total ellapsed time using getTime: 0.4743 seconds
+Process rank: 7
+total ellapsed time using getTime: 0.4743 seconds
+Process rank: 9
+total ellapsed time using getTime: 0.4744 seconds
+Process rank: 10
+total ellapsed time using getTime: 0.4744 seconds
+Process rank: 11
+total ellapsed time using getTime: 0.4744 seconds
+Process rank: 1
+total ellapsed time using getTime: 0.4744 seconds
+Process rank: 8
+total ellapsed time using getTime: 0.4743 seconds
+Process rank: 0
+pi is approximately 3.1415926555898399, Error is 0.0000000020000468
+Computed in 0.3768 seconds
+total ellapsed time using getTime: 0.379 seconds
+
+
+Batch Job Summary Report (version 21.01.1) for Job "cpi_mpi_extern_gettime" (29976297) on daint
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2021-03-17T18:57:51 2021-03-17T18:57:51 2021-03-17T18:57:52 2021-03-17T18:58:01   00:00:09   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+      jbucko         uzg2        debug        1      0.314 kJ
+

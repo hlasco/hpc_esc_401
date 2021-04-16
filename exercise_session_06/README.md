@@ -9,5 +9,5 @@ In the third exercise, you will implement the missing routines of an incomplete 
 
 In this folder you can find:
 
-* ring/ring.c : a skeleton code that you can use to solve Exercise 1
+* ring_and_deadlocks/ring.c : a skeleton code that you can use to solve Exercise 1
 * poisson_solver/ : the incomplete Poisson Solver for exercise 3

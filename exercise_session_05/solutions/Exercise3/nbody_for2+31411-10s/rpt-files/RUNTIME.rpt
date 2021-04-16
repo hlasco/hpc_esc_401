@@ -1,0 +1,202 @@
+
+#################################################################
+#                                                               #
+#            CrayPat-lite Performance Statistics                #
+#                                                               #
+#################################################################
+
+CrayPat/X:  Version 20.10.0 Revision 7ec62de47  09/16/20 16:54:26
+Experiment:                  lite  lite-samples
+Number of PEs (MPI ranks):      1
+Numbers of PEs per Node:        1
+Numbers of Threads per PE:     36
+Number of Cores per Socket:    18
+Execution start time:  Tue Apr 13 15:51:40 2021
+System name and speed:  nid00010  2.101 GHz (nominal)
+Intel Broadwell  CPU  Family:  6  Model: 79  Stepping:  1
+DRAM:  64 GiB DDR4-2133 on 2.1 GHz nodes
+
+
+
+Avg Process Time:            25.12 secs              
+High Memory:                 507.7 MiBytes     507.7 MiBytes per PE
+Observed CPU clock boost:    123.8 %          
+Percent cycles stalled:       95.0 %          
+Instr per Cycle:              0.05
+I/O Read Rate:            8.111766 MiBytes/sec       
+
+Notes for table 1:
+
+  This table shows functions that have significant exclusive sample
+    hits, averaged across ranks.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O samp_profile ...
+
+Table 1:  Profile by Function
+
+  Samp% |    Samp | Imb. |  Imb. | Group
+        |         | Samp | Samp% |  Function=[MAX10]
+        |         |      |       |   Thread=HIDE
+       
+ 100.0% | 2,496.0 |   -- |    -- | Total
+|---------------------------------------------------------------------
+|  81.7% | 2,038.0 |   -- |    -- | USER
+||--------------------------------------------------------------------
+||  73.0% | 1,823.0 | 65.4 |  3.3% | forces.LOOP@li.16
+||   8.5% |   211.0 | 60.2 | 19.2% | std::vector<>::operator[]
+||====================================================================
+|  17.7% |   443.0 |   -- |    -- | ETC
+||--------------------------------------------------------------------
+||  12.7% |   318.0 |   -- |    -- | fullscan_barrier_list
+||   4.3% |   107.0 |   -- |    -- | pthread_cond_broadcast@@GLIBC_2.3.2
+|=====================================================================
+
+Notes for table 2:
+
+  This table shows functions, and line numbers within functions, that
+    have significant exclusive sample hits, averaged across ranks.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O samp_profile+src ...
+
+Table 2:  Profile by Group, Function, and Line
+
+  Samp% |    Samp | Imb. |  Imb. | Group
+        |         | Samp | Samp% |  Function=[MAX10]
+        |         |      |       |   Source
+        |         |      |       |    Line
+        |         |      |       |     Thread=HIDE
+       
+ 100.0% | 2,496.0 |   -- |    -- | Total
+|-----------------------------------------------------------------------------
+|  81.7% | 2,038.0 |   -- |    -- | USER
+||----------------------------------------------------------------------------
+||  73.0% | 1,823.0 |   -- |    -- | forces.LOOP@li.16
+3|        |         |      |       |  exercise_session_05/solutions/Exercise3/nbody_for2.cpp
+||||--------------------------------------------------------------------------
+4|||  10.3% |   257.0 | 31.7 | 10.8% | line.19
+4|||  11.8% |   294.0 | 26.1 |  7.9% | line.20
+4|||   8.5% |   211.0 | 35.0 | 13.6% | line.21
+4|||  20.4% |   508.0 | 58.7 |  9.6% | line.24
+4|||   8.9% |   222.0 | 39.5 | 13.9% | line.25
+4|||  12.2% |   304.0 | 41.2 | 11.9% | line.26
+||||==========================================================================
+||   8.5% |   211.0 |   -- |    -- | std::vector<>::operator[]
+3|        |         |      |       |  include/g++/bits/stl_vector.h
+4|   8.3% |   206.0 | 62.2 | 20.5% |   line.931
+||============================================================================
+|  17.7% |   443.0 |   -- |    -- | ETC
+||----------------------------------------------------------------------------
+||  12.7% |   318.0 |   -- |    -- | fullscan_barrier_list
+||   4.3% |   107.0 |   -- |    -- | pthread_cond_broadcast@@GLIBC_2.3.2
+|=============================================================================
+
+Notes for table 3:
+
+  This table shows functions that have the most significant exclusive
+    time, taking for each thread the average time across ranks.
+    The imbalance percentage is relative to the team observed to
+    participate in execution.
+    Use -s th=ALL to see individual thread values.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O profile_th_pe ...
+
+Table 3:  Profile by Function Group and Function
+
+  Samp% |    Samp | Imb. |  Imb. | Team | Group
+        |         | Samp | Samp% | Size |  Function=[MAX10]
+        |         |      |       |      |   Thread=HIDE
+        |         |      |       |      |    PE=HIDE
+       
+ 100.0% | 2,496.0 |   -- |    -- |   -- | Total
+|----------------------------------------------------------------------------
+|  81.7% | 2,038.0 |   -- |    -- |   -- | USER
+||---------------------------------------------------------------------------
+||  73.0% | 1,823.0 | 65.4 |  3.3% |   36 | forces.LOOP@li.16
+||   8.5% |   211.0 | 60.2 | 19.2% |   36 | std::vector<>::operator[]
+||===========================================================================
+|  17.7% |   443.0 |   -- |    -- |   -- | ETC
+||---------------------------------------------------------------------------
+||  12.7% |   318.0 |   -- |    -- |    1 | fullscan_barrier_list
+||   4.3% |   107.0 |   -- |    -- |    1 | pthread_cond_broadcast@@GLIBC_2.3.2
+|============================================================================
+
+Observation:  MPI utilization
+
+    No suggestions were made because each node has only one rank.
+
+
+Observation:  Program sensitivity to memory latency
+
+    The relatively low memory bandwidth utilization but significant rate
+    of stalls in the program suggest that its performance is limited by
+    memory latency.
+    It could be beneficial to improve prefetching in loops in functions
+    high in the profile, by modifying compiler-generated prefetches or
+    inserting directives into the source code.
+
+
+Notes for table 4:
+
+  This table shows memory traffic for numa nodes, taking for each numa
+    node the maximum value across nodes. It also shows the balance in
+    memory traffic by showing the top 3 and bottom 3 node values.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O mem_bw ...
+
+Table 4:  Memory Bandwidth by Numanode
+
+  Memory |   Local |  Remote |    Thread |  Memory |  Memory | Numanode
+ Traffic |  Memory |  Memory |      Time | Traffic | Traffic |  Thread=HIDE
+  GBytes | Traffic | Traffic |           |  GBytes |       / | 
+         |  GBytes |  GBytes |           |   / Sec | Nominal | 
+         |         |         |           |         |    Peak | 
+|--------------------------------------------------------------------------
+|    0.29 |    0.29 |    0.00 | 25.110222 |    0.01 |    0.0% | numanode.0
+|==========================================================================
+
+Notes for table 5:
+
+  This table shows energy and power usage for the nodes with the
+    maximum, mean, and minimum usage, as well as the sum of usage over
+    all nodes.
+    Energy and power for accelerators is also shown, if applicable.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O program_energy ...
+
+Table 5:  Program energy and power usage (from Cray PM)
+
+   Node |     Node |   Process | Thread=HIDE
+ Energy |    Power |      Time | 
+    (J) |      (W) |           | 
+--------------------------------------------
+  3,904 |  155.388 | 25.124242 | Total
+============================================
+
+Notes for table 6:
+
+  This table show the average time and number of bytes read from each
+    input file, taking the average over the number of ranks that read
+    from the file.  It also shows the number of read operations, and
+    average rates.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O read_stats ...
+
+Table 6:  File Input Stats by Filename
+
+
+    No File Name had data that satisfied the selection criteria.
+
+Program invocation:  nbody_for2
+
+For a complete report with expanded tables and notes, run:
+  pat_report /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise3/nbody_for2+31411-10s
+
+For help identifying callers of particular functions:
+  pat_report -O callers+src /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise3/nbody_for2+31411-10s
+To see the entire call tree:
+  pat_report -O calltree+src /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise3/nbody_for2+31411-10s
+
+For interactive, graphical performance analysis, run:
+  app2 /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise3/nbody_for2+31411-10s
+
+================  End of CrayPat-lite output  ==========================

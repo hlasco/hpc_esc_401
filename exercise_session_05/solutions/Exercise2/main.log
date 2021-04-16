@@ -1,0 +1,158 @@
+CrayPat/X:  Version 20.10.0 Revision 7ec62de47  09/16/20 16:54:26
+
+#################################################################
+#                                                               #
+#            CrayPat-lite Performance Statistics                #
+#                                                               #
+#################################################################
+
+CrayPat/X:  Version 20.10.0 Revision 7ec62de47  09/16/20 16:54:26
+Experiment:                  lite  lite-samples
+Number of PEs (MPI ranks):      1
+Numbers of PEs per Node:        1
+Numbers of Threads per PE:      1
+Number of Cores per Socket:    12
+Execution start time:  Fri Mar 26 17:39:39 2021
+System name and speed:  nid02357  2.601 GHz (nominal)
+Intel Haswell    CPU  Family:  6  Model: 63  Stepping:  2
+DRAM:  64 GiB DDR4-2400 on 2.6 GHz nodes
+
+
+
+Avg Process Time:          3.86 secs         
+High Memory:               37.3 MiBytes 37.3 MiBytes per PE
+Observed CPU clock boost: 128.9 %      
+Percent cycles stalled:    65.2 %      
+Instr per Cycle:           1.10
+
+Notes for table 1:
+
+  This table shows functions that have significant exclusive sample
+    hits, averaged across ranks.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O samp_profile ...
+
+Table 1:  Profile by Function
+
+  Samp% |  Samp | Imb. |  Imb. | Group
+        |       | Samp | Samp% |  Function=[MAX10]
+       
+ 100.0% | 381.0 |   -- |    -- | Total
+|-------------------------------------------------
+| 100.0% | 381.0 |   -- |    -- | USER
+||------------------------------------------------
+|| 100.0% | 381.0 |   -- |    -- | forces
+|=================================================
+
+Notes for table 2:
+
+  This table shows functions, and line numbers within functions, that
+    have significant exclusive sample hits, averaged across ranks.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O samp_profile+src ...
+
+Table 2:  Profile by Group, Function, and Line
+
+  Samp% |  Samp | Imb. |  Imb. | Group
+        |       | Samp | Samp% |  Function=[MAX10]
+        |       |      |       |   Source
+        |       |      |       |    Line
+       
+ 100.0% | 381.0 |   -- |    -- | Total
+|-----------------------------------------------------------------------------
+| 100.0% | 381.0 |   -- |    -- | USER
+||----------------------------------------------------------------------------
+|| 100.0% | 381.0 |   -- |    -- | forces
+3|        |       |      |       |  exercise_session_05/solutions/Exercise2/forces.cpp
+||||--------------------------------------------------------------------------
+4|||   4.2% |  16.0 |   -- |    -- | line.9
+4|||   2.9% |  11.0 |   -- |    -- | line.11
+4|||   5.8% |  22.0 |   -- |    -- | line.12
+4|||   2.1% |   8.0 |   -- |    -- | line.13
+4|||  68.2% | 260.0 |   -- |    -- | line.14
+4|||   4.2% |  16.0 |   -- |    -- | line.15
+4|||  12.6% |  48.0 |   -- |    -- | line.16
+|=============================================================================
+
+Observation:  MPI utilization
+
+    No suggestions were made because each node has only one rank.
+
+
+Observation:  Program sensitivity to memory latency
+
+    The relatively low memory bandwidth utilization but significant rate
+    of stalls in the program suggest that its performance is limited by
+    memory latency.
+    It could be beneficial to improve prefetching in loops in functions
+    high in the profile, by modifying compiler-generated prefetches or
+    inserting directives into the source code.
+
+
+Notes for table 3:
+
+  This table shows memory traffic for numa nodes, taking for each numa
+    node the maximum value across nodes. It also shows the balance in
+    memory traffic by showing the top 3 and bottom 3 node values.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O mem_bw ...
+
+Table 3:  Memory Bandwidth by Numanode
+
+  Memory |   Local |   Thread |  Memory |  Memory | Numanode
+ Traffic |  Memory |     Time | Traffic | Traffic | 
+  GBytes | Traffic |          |  GBytes |       / | 
+         |  GBytes |          |   / Sec | Nominal | 
+         |         |          |         |    Peak | 
+|-------------------------------------------------------------
+|    0.00 |    0.00 | 3.916610 |    0.00 |    0.0% | numanode.0
+|=============================================================
+
+Notes for table 4:
+
+  This table shows energy and power usage for the nodes with the
+    maximum, mean, and minimum usage, as well as the sum of usage over
+    all nodes.
+    Energy and power for accelerators is also shown, if applicable.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O program_energy ...
+
+Table 4:  Program energy and power usage (from Cray PM)
+
+   Node |     Node |  Process | Total
+ Energy |    Power |     Time | 
+    (J) |      (W) |          | 
+-------------------------------------
+    395 |  102.279 | 3.861997 | Total
+=====================================
+Program invocation:  main
+
+For a complete report with expanded tables and notes, run:
+  pat_report /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise2/main+9599-2357s
+
+For help identifying callers of particular functions:
+  pat_report -O callers+src /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise2/main+9599-2357s
+To see the entire call tree:
+  pat_report -O calltree+src /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise2/main+9599-2357s
+
+For interactive, graphical performance analysis, run:
+  app2 /users/jbucko/ta_hpc_21/jbucko_git_files/exercise_session_05/solutions/Exercise2/main+9599-2357s
+
+================  End of CrayPat-lite output  ==========================
+
+
+Batch Job Summary Report (version 21.01.1) for Job "run_main" (30147313) on daint
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2021-03-26T17:39:29 2021-03-26T17:39:29 2021-03-26T17:39:31 2021-03-26T17:39:49   00:00:18   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+      jbucko         uzg2        debug        1      1.283 kJ
+

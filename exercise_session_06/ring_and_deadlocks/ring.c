@@ -23,7 +23,6 @@ int main(int argc, char** argv) {
     //     update the send buffer
     //     update the local sum
 
-    // Print off a hello world message
     printf("I am processor %d out of %d, and the sum is %d\n", my_rank, size, my_sum);
 
     // Finalize the MPI environment.

@@ -2,6 +2,7 @@
 #define INIT_H
 
 #include <iostream>
+#include <cmath>
 
 struct params {
     // Which source term to use (1 or 2)

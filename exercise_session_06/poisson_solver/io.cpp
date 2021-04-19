@@ -8,7 +8,7 @@
  * @param      f        Matrix containing the source term
  */
 void output_source(params p, double** f){
-    std::string file_name = "outputs/output_source.csv";
+    std::string file_name = "output/output_source.csv";
     std::ofstream ofs(file_name, std::ofstream::out | std::ofstream::trunc);
     for (int i=0; i<p.nx; i++){
         for (int j=0; j<p.ny; j++){
@@ -31,7 +31,7 @@ void output_source(params p, double** f){
 void output(params p, int step, double** u_new){
     std::string fnum = std::to_string(step);
     fnum.insert(fnum.begin(), 7 - fnum.length(), '0');
-    std::string file_name = "outputs/output_" + fnum + ".csv";
+    std::string file_name = "output/output_" + fnum + ".csv";
     std::ofstream ofs(file_name, std::ofstream::out | std::ofstream::trunc);
     for (int i=0; i<p.nx; i++){
         for (int j=0; j<p.ny; j++){

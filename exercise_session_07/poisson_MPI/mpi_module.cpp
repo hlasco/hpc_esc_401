@@ -27,24 +27,34 @@ int mpi_get_domain(int nx, int ny, int my_rank, int size, int* min_x, int* max_x
 }
 
 int halo_comm(params p, int my_rank, int size, double** u, double* fromLeft, double* fromRight){
-	for (int j=0;j<(p.ymax - p.ymin);j++) {fromLeft[j] = 0; fromRight[j] = 0;}
+	
+	/*this function, vectors fromLeft and fromRight should be received from the neighbours of my_rank process*/
+	/*if you want to implement also cartesian topology, you need fromTop and fromBottom in addition to fromLeft a
+	nd fromRight*/
 
-    /* define columns to be sent to right neighbour and to the left neighbour, also receive one both form left and right neighbour*/
+	for (int j=0;j<(p.ymax - p.ymin);j++) {fromLeft[j] = 0; fromRight[j] = 0;} //initialize fromLeft and fromRight
 
-    /* choose either to define MPIcolumn_type (first three rows below) or define the columns to be sent manually (lines 39-42)*/
+    /* define columns to be sent to right neighbour and to the left neighbour, 
+    also receive one both form left and right neighbour*/
+
+    /* choose either to define MPIcolumn_type (lines 43-45) or define 
+    the columns to be sent manually (lines 53-56)*/
 
     // MPI_Datatype column_type;
     // MPI_Type_vector(p.ymax - p.ymin, 1, p.xmax - p.xmin, MPI_DOUBLE, &column_type);
     // MPI_Type_commit(&column_type);
 
-    // ...code...
+    // ...some code goes here and then do not forget to free the column_type
 
     // MPI_Type_free(&column_type);
+
+	//or alternative approach below
 
 	// double* column_to_right = new double [p.ymax - p.ymin];
 	// for (int j=0;j<(p.ymax - p.ymin);j++) column_to_right[j] = u[p.xmax - p.xmin - 1][j]; 
 	// double* column_to_left = new double [p.ymax - p.ymin];
 	// for (int j=0;j<(p.ymax - p.ymin);j++) column_to_left[j] = u[0][j]; 
+
 
 	printf("mpi_module.cpp, define halo comm:  \n");
 	return 0;
@@ -57,7 +67,4 @@ int ALLREDUCE(double* loc_diff, double* loc_sumdiff){
 	return 0;
 
 	}
-int BARRIER(){
-	MPI_Barrier(MPI_COMM_WORLD);
-	return 0;
-}
+

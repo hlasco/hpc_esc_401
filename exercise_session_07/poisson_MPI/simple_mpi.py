@@ -14,11 +14,6 @@ _, n, outn = sys.argv
 
 n = int(n)
 
-nx = []
-ny = []
-nstep = []
-diff = []
-error = []
 source_arr = []
 data_arr = []
 
@@ -34,9 +29,8 @@ for i in np.arange(n):
     data_arr.append(data)
 
 source_arr = np.array(source_arr)
-print(source_arr.shape)
-data_arr = np.array(source_arr)
-print(data_arr.shape)
+data_arr = np.array(data_arr)
+
 
 # sys.exit()
 
@@ -50,13 +44,6 @@ for i in np.arange(1,n):
 
 data = datdat
 source = sourcedat
-
-# vmin = np.min(exact)
-# vmax = np.max(exact)
-
-# error = np.abs(exact-dat)
-
-# plot the map
 
 fig, ax = plt.subplots(1,2, figsize=(7,3), sharex=True)
 fig.subplots_adjust(left=0.02, bottom=0.06, right=0.95, top=0.94, wspace=0.05)
@@ -77,29 +64,5 @@ fig.colorbar(im1, ax=ax[0])
 fig.colorbar(im2, ax=ax[1])
 
 plt.tight_layout()
-plt.savefig("test.png")
-# fig, ax = plt.subplots(1,3, figsize=(10,3), sharex=True)
-# fig.subplots_adjust(left=0.02, bottom=0.06, right=0.95, top=0.94, wspace=0.05)
+plt.savefig("ranks_merged.png")
 
-
-# im1 = ax[0].imshow(exact[1:-1, 1:-1].T, vmin=vmin, vmax=vmax, origin='lower')
-# im2 = ax[1].imshow(  dat[1:-1, 1:-1].T, vmin=vmin, vmax=vmax, origin='lower')
-# im3 = ax[2].imshow(error[1:-1, 1:-1].T, origin='lower', norm=LogNorm())
-
-# ax[0].set_xlabel("ny")
-# ax[1].set_xlabel("ny")
-# ax[2].set_xlabel("ny")
-
-# ax[0].set_ylabel("nx")
-
-# ax[0].set_title("Exact Solution")
-# ax[1].set_title("Approx. Solution".format(nstep))
-# ax[2].set_title("Error".format(nstep))
-
-# fig.colorbar(im1, ax=ax[0])
-# fig.colorbar(im2, ax=ax[1])
-# fig.colorbar(im3, ax=ax[2])
-
-# plt.tight_layout()
-
-# plt.show()

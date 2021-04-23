@@ -1,4 +1,4 @@
-rhs_function=1
+rhs_function=2
 nx=161
 ny=161
 foutput=1000

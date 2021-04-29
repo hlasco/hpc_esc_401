@@ -6,7 +6,7 @@ from matplotlib.colors import  LogNorm
 from numpy import genfromtxt
 
 # path the the file
-path_to_output = "output_0058336.csv"
+path_to_output = "output_0041021.csv"
 path_to_source = "output_source.csv"
 
 

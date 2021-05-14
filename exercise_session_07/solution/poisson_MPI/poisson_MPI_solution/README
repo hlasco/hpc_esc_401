@@ -1,0 +1,2 @@
+- both simple_mpi.py and mpi_module.cpp will be adjusted 
+- whole skeleton will be added (with some MPI_Init(),...in the main.cpp)

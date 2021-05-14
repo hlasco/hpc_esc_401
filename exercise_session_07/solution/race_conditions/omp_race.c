@@ -51,23 +51,34 @@ int main(int argc, char *argv[]){
 	int num_size, true_n0=646016;
 	int numbers[2000000];
 
+<<<<<<< HEAD
+=======
     #pragma omp parallel
 {
     printf("Hello World... from thread = %d\n",
            omp_get_thread_num());
 }
 	
+>>>>>>> 39f62edb8369bb4f178839c054f4c78ad7a89ede
 	read_file("num.txt",numbers,&num_size);
 	printf("Size of integer array/file: %d\n",num_size);
 
     // first loop
     int maxval = 0;
+<<<<<<< HEAD
+    #pragma omp parallel for
+=======
     #pragma omp for
+>>>>>>> 39f62edb8369bb4f178839c054f4c78ad7a89ede
     for (int i=0;i<num_size;i++) if (numbers[i] > maxval) maxval = numbers[i];
     printf("max number in file: %d\n",maxval);	
 
     // second loop
     int num_n0 = 0;
+<<<<<<< HEAD
+    #pragma omp parallel for
+=======
+>>>>>>> 39f62edb8369bb4f178839c054f4c78ad7a89ede
     for (int i=0;i<num_size;i++) if (numbers[i] == 0) num_n0++;
     printf("number of 0s in file: %d\n",num_n0);  
     printf("true number of 0s in file: %d\n",true_n0);  

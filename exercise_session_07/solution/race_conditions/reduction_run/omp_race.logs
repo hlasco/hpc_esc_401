@@ -1,0 +1,67 @@
+omp_reduction run 1
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 2
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 3
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 4
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 5
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 6
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 7
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 8
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 9
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+omp_reduction run 10
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+
+
+Batch Job Summary Report (version 21.01.1) for Job "omp_reduction" (30931456) on daint
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2021-04-28T13:08:44 2021-04-28T13:08:44 2021-04-28T13:09:21 2021-04-28T13:09:43   00:00:22   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    hlascomb         uzh8        debug        1      2.267 kJ
+

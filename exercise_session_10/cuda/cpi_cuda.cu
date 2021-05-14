@@ -30,7 +30,7 @@ int main(void) {
 	size_t size = NUM_BLOCK*NUM_THREAD*sizeof(double);  //Array memory size
 	sumHost = (double *)malloc(size);  //  Allocate array on host
 	cudaMalloc((void **) &sumDev, size);  // Allocate array on device
-    double start = getTime();
+   	double start = getTime();
 
 	// Initialize array in device to 0
 	cudaMemset(sumDev, 0, size);
@@ -43,8 +43,8 @@ int main(void) {
 	pi *= step;
 
 	// Print results
-    double delta = getTime() - start;
-    printf("PI = %.16g computed in %.4g seconds\n", pi, delta);
+	double delta = getTime() - start;
+	printf("PI = %.16g computed in %.4g seconds\n", pi, delta);
 	// Cleanup
 	free(sumHost);
 	cudaFree(sumDev);

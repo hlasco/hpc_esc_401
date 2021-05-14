@@ -6,7 +6,6 @@ static long steps = 1000000000;
 int main (int argc, const char *argv[]) {
     int i; double x;
     double pi;
-    char *p;
     double step = 1.0/(double) steps;
     for (int j=0;j<5;j++){
         double sum = 0.0;

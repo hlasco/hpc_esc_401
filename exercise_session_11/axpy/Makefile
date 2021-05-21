@@ -1,7 +1,7 @@
 .PHONY: all clean
 
-CRAY ?= 1
-PGI  ?= 0
+CRAY ?= 0
+PGI  ?= 1
 GCC  ?= 0
 VERBOSE ?= 0
 override CPPFLAGS += -I../common
@@ -16,7 +16,7 @@ endif
 
 ifeq ($(PE_ENV), PGI)
 	CXX = pgc++
-	CXXFLAGS = -DPGI -std=c++11 -O3 -acc -Minfo=accel -ta=tesla:cuda8.0,pinned
+	CXXFLAGS = -DPGI -std=c++11 -O3 -acc -Minfo=accel -ta=tesla:cc60,pinned 
 	LDFLAGS += -L$(CRAY_CUDATOOLKIT_DIR)/lib64 -lcudart
 endif
 

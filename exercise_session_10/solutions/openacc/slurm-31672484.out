@@ -1,0 +1,83 @@
+PI = 3.141592653589793 computed in 1.429 seconds
+PI = 3.141592653589793 computed in 0.01288 seconds
+PI = 3.141592653589793 computed in 0.02531 seconds
+PI = 3.141592653589793 computed in 0.05022 seconds
+PI = 3.141592653589793 computed in 0.101 seconds
+PI = 3.141592653589793 computed in 1.464 seconds
+PI = 3.141592653589793 computed in 0.04729 seconds
+PI = 3.141592653589793 computed in 0.06302 seconds
+PI = 3.141592653589793 computed in 0.1132 seconds
+PI = 3.141592653589793 computed in 0.1378 seconds
+PI = 3.141592653589793 computed in 1.478 seconds
+PI = 3.141592653589793 computed in 0.05202 seconds
+PI = 3.141592653589793 computed in 0.08854 seconds
+PI = 3.141592653589793 computed in 0.1377 seconds
+PI = 3.141592653589793 computed in 0.1382 seconds
+PI = 3.141592653589793 computed in 1.335 seconds
+PI = 3.141592653589793 computed in 0.0434 seconds
+PI = 3.141592653589793 computed in 0.08815 seconds
+PI = 3.141592653589793 computed in 0.1131 seconds
+PI = 3.141592653589793 computed in 0.1258 seconds
+PI = 3.141592653589793 computed in 1.499 seconds
+PI = 3.141592653589793 computed in 0.0857 seconds
+PI = 3.141592653589793 computed in 0.113 seconds
+PI = 3.141592653589793 computed in 0.1509 seconds
+PI = 3.141592653589793 computed in 0.1006 seconds
+PI = 3.141592653589793 computed in 1.512 seconds
+PI = 3.141592653589793 computed in 0.08157 seconds
+PI = 3.141592653589793 computed in 0.1381 seconds
+PI = 3.141592653589793 computed in 0.1005 seconds
+PI = 3.141592653589793 computed in 0.1132 seconds
+PI = 3.141592653589793 computed in 1.537 seconds
+PI = 3.141592653589793 computed in 0.1197 seconds
+PI = 3.141592653589793 computed in 0.1378 seconds
+PI = 3.141592653589793 computed in 0.1257 seconds
+PI = 3.141592653589793 computed in 0.07611 seconds
+PI = 3.141592653589793 computed in 1.564 seconds
+PI = 3.141592653589793 computed in 0.1204 seconds
+PI = 3.141592653589793 computed in 0.1382 seconds
+PI = 3.141592653589793 computed in 0.1126 seconds
+PI = 3.141592653589793 computed in 0.07618 seconds
+PI = 3.141592653589793 computed in 1.583 seconds
+PI = 3.141592653589793 computed in 0.1208 seconds
+PI = 3.141592653589793 computed in 0.1383 seconds
+PI = 3.141592653589793 computed in 0.1007 seconds
+PI = 3.141592653589793 computed in 0.07538 seconds
+PI = 3.141592653589793 computed in 1.658 seconds
+PI = 3.141592653589793 computed in 0.1375 seconds
+PI = 3.141592653589793 computed in 0.08801 seconds
+PI = 3.141592653589793 computed in 0.1006 seconds
+PI = 3.141592653589793 computed in 0.0509 seconds
+PI = 3.141592653589793 computed in 1.608 seconds
+PI = 3.141592653589793 computed in 0.1371 seconds
+PI = 3.141592653589793 computed in 0.1256 seconds
+PI = 3.141592653589793 computed in 0.1007 seconds
+PI = 3.141592653589793 computed in 0.06334 seconds
+PI = 3.141592653589793 computed in 1.651 seconds
+PI = 3.141592653589793 computed in 0.1373 seconds
+PI = 3.141592653589793 computed in 0.1507 seconds
+PI = 3.141592653589793 computed in 0.0761 seconds
+PI = 3.141592653589793 computed in 0.03786 seconds
+
+
+Batch Job Summary Report (version 21.01.1) for Job "openacc" (31672484) on daint
+
+Job information (1/3)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2021-06-04T11:19:23 2021-06-04T11:19:23 2021-06-04T11:20:30 2021-06-04T11:20:43   00:00:13   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/3)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+      jbucko         uzg2        debug        1      0.565 kJ
+
+Job information (3/3) - GPU utilization data
+----------------------------------------------------
+   Node name       Usage      Max mem Execution time
+------------ ----------- ------------ --------------
+    nid02356        22 %      925 MiB       00:00:02
+

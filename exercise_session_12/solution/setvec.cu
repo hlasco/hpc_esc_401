@@ -24,8 +24,7 @@ int main () {
   cudaMalloc (&gpu_ptr, sizeof(float)*N);
 
   //TO DO : write kernel invocation here
-  int numBlocks = (N + BLOCKSIZE-1)/BLOCKSIZE;
-  kern_set_val<<<numBlocks, BLOCKSIZE>>>(gpu_ptr, 11.0, N);
+  kern_set_val<<<N/BLOCKSIZE, BLOCKSIZE>>>(gpu_ptr, 11.0, N);
   cudaDeviceSynchronize ();
 
   //TO DO : copy data to host
